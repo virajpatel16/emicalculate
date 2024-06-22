@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1D1D1D"
+    tools:context=".Start_screen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1D1D1D"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:layout_marginTop="32dp" />
+
+
+        <LinearLayout
+            android:id="@+id/options_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:background="@drawable/roundad_corner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="EMI &amp;  Stock Calculator"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+
+                android:layout_marginTop="8dp"
+                android:text="Calculate loan EMIs, interest rates, \nand repayment schedules"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:gravity="center" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:text="• EMI Calculator"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="• Loan Compare"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:text="• Intraday Trading"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="• Delivery Trading"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:text="• Futures Trading"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="• Options Trading"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/get_started_button"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/options_container"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:backgroundTint="#0080FF"
+            android:text="Get Started"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:drawableEnd="@drawable/right" />
+
+        <TextView
+            android:id="@+id/privacy_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/get_started_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="By continuing you accept Privacy Policy"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>
