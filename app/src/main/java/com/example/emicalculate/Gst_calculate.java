@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ public class Gst_calculate extends Fragment {
     RadioButton addGSTRadioButton, subtractGSTRadioButton;
     DecimalFormat formatter = new DecimalFormat("#,##,###.00");
     TextView txt_cgst_sgst;
-    CardView resultduration;
+    LinearLayout resultduration;
     ExtendedFloatingActionButton btn_business_calculate,btn_business_reset;
 ImageView gst_back;
 

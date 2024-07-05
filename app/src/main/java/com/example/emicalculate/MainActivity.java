@@ -31,16 +31,16 @@ public class MainActivity extends AppCompatActivity {
         vat = findViewById(R.id.vat);
 
 
-        emicalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Load Fragment1 into container_fragment1
-                Intent intent = new Intent(MainActivity.this, Fragment_container.class);
-                intent.putExtra("dailycheck", 101);
+            emicalculate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Load Fragment1 into container_fragment1
+                    Intent intent = new Intent(MainActivity.this, Fragment_container.class);
+                    intent.putExtra("dailycheck", 101);
 
-                startActivity(intent);
-            }
-        });
+                    startActivity(intent);
+                }
+            });
 
         loancompare.setOnClickListener(new View.OnClickListener() {
             @Override

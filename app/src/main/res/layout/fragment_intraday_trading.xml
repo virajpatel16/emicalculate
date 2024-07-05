@@ -59,8 +59,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_50sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/roundad_corner"
+                    android:background="@drawable/bg_app"
                     android:inputType="numberDecimal"
+
+                    android:textColorHint="@color/white"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:hint="Buy price"
                     android:textColor="@color/white" />
 
@@ -77,7 +80,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_50sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/roundad_corner"
+                    android:background="@drawable/bg_app"
+
+                    android:textColorHint="@color/white"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:inputType="numberDecimal"
                     android:hint="Sell Price"
                     android:textColor="@color/white" />
@@ -96,7 +102,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_50sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/roundad_corner"
+                    android:background="@drawable/bg_app"
+
+                    android:textColorHint="@color/white"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:inputType="numberDecimal"
                     android:hint="Quantity"
                     android:textColor="@color/white" />
@@ -113,40 +122,54 @@
                     android:id="@+id/spinner_state"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_50sdp"
-                    android:background="@drawable/rounded" />
+
+                    android:textColorHint="@color/white"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:background="@drawable/bg_app" />
 
             </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/inraday_radio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/toggle"
+                android:elevation="@dimen/_10sdp"
                 android:orientation="horizontal">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/in_nsb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_25sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:text="NSE"
+                <RadioButton
+                    android:id="@+id/tv_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/togglewidget"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Year"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
-                    app:buttonTint="@color/footer_color" />
+                    android:textSize="14sp" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/in_bse"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_25sdp"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:text="BSE"
+                <RadioButton
+                    android:id="@+id/tv_months"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/togglewidget"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Month"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
-                    app:buttonTint="@color/footer_color" />
-
+                    android:textSize="14sp" />
             </RadioGroup>
 
 
@@ -163,7 +186,7 @@
                     android:layout_height="@dimen/_35sdp"
                     android:layout_margin="@dimen/_10sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="#4C4141"
+                    android:backgroundTint="#26C4C4C4"
 
                     android:padding="@dimen/_1sdp"
                     android:text="@string/btn_reset"
@@ -176,7 +199,7 @@
                     android:layout_height="@dimen/_35sdp"
                     android:layout_margin="@dimen/_10sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/footer_color"
+                    android:backgroundTint="@color/new_color"
 
                     android:padding="@dimen/_1sdp"
                     android:text="@string/btn_calculate"
@@ -191,7 +214,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-
                 android:orientation="horizontal">
 
                 <TextView
@@ -200,7 +222,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginLeft="@dimen/_20sdp"
-                    android:text=" "
+                    android:text=""
                     android:textColor="@color/footer_color"
                     android:textStyle="bold" />
 
@@ -225,7 +247,7 @@
                 android:background="@drawable/rounded"
                 app:cardElevation="@dimen/_10sdp"
                 android:backgroundTint="#1D1D1D"
-                android:visibility="gone"
+
                 android:elevation="@dimen/_5sdp">
 
 
@@ -238,11 +260,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+
                             android:orientation="horizontal">
 
                             <TextView
@@ -253,7 +276,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Invetment Amount"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -270,7 +293,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -282,7 +305,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/_10sdp"
                                 android:text="Turnover"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -300,7 +323,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
 
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -315,7 +338,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Brokerage"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -332,7 +355,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -347,7 +370,8 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="STT Total"
-                                android:textColor="#877F7F"
+
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -364,7 +388,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -379,7 +403,8 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Exchange txn charge"
-                                android:textColor="#877F7F"
+
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -396,7 +421,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -411,7 +436,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="GST"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -428,7 +453,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -443,7 +468,8 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Sebi Turnover Fees"
-                                android:textColor="#877F7F"
+
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -460,7 +486,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -475,7 +501,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Stamp Duty"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -492,7 +518,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -507,7 +533,8 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="Total Tax and charges"
-                                android:textColor="#877F7F"
+
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView

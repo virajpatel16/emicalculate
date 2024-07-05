@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -40,7 +41,7 @@ public class Option_trading extends Fragment {
     /* access modifiers changed from: private */
     public EditText edtSell;
     private float exchange;
-    CardView fullinfo;
+    LinearLayout fullinfo;
     private float gst;
     boolean isCalculated = false;
     public Float mBuyAmt;

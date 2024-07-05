@@ -16,4 +16,6 @@
     <color name="CPP">#EF5350</color>
     <color name="Java">#29B6F6</color>
     <color name="round">#333333</color>
+    <color name="new_color">#D64933</color>
+    <color name="data">#26C4C4C4</color>
 </resources>

@@ -13,16 +13,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:gravity="center"
-            android:text="Exit"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_23sdp"
-            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="@dimen/_130sdp"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_130sdp"
+            android:src="@drawable/exit"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +27,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Are you sure you want to exit ?"
-            android:textColor="@color/white"
+            android:textColor="@color/new_color"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -50,16 +45,15 @@
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_weight="1"
-                android:backgroundTint="#4C4141"
+                android:backgroundTint="#26C4C4C4"
                 android:elevation="0dp"
-                android:outlineSpotShadowColor="#00FFFFFF"
                 android:padding="@dimen/_5sdp"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="No"
+                android:text="Exit"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 app:elevation="0dp"
-                app:strokeColor="@color/white"
+                app:strokeColor="#26C4C4C4"
                 app:strokeWidth="@dimen/_2sdp" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -68,12 +62,12 @@
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/footer_color"
+                android:backgroundTint="@color/new_color"
                 android:elevation="0dp"
                 android:outlineSpotShadowColor="#00FFFFFF"
                 android:padding="@dimen/_5sdp"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="Yes"
+                android:text="Cancel"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 app:elevation="0dp" />

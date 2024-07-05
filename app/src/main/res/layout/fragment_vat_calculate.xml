@@ -53,11 +53,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/roundad_corner"
+                        android:background="@drawable/bg_app"
                         android:drawableRight="@drawable/currency_rupee_24dp_fill0_wght400_grad0_opsz24"
                         android:hint="Net Price"
-                        android:inputType="numberDecimal"
+
+                        android:textColorHint="@color/white"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:inputType="numberDecimal"
+
                         android:textColor="@color/white" />
 
                     <LinearLayout
@@ -71,7 +74,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Rate of VAT*"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -81,24 +84,26 @@
                             android:layout_margin="@dimen/_10sdp"
                             android:layout_marginTop="10dp"
                             android:orientation="horizontal"
-                            android:tag="binding_4">
+                            >
 
                             <RadioButton
                                 android:id="@+id/percent_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                app:buttonTint="@color/new_color"
                                 android:text="1%"
-                                android:textColor="@color/white"
 
+                                android:textColor="@color/white"
                                 android:textSize="14sp" />
 
                             <RadioButton
                                 android:id="@+id/percent_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                app:buttonTint="@color/new_color"
                                 android:text="4%"
-                                android:textColor="@color/white"
 
+                                android:textColor="@color/white"
                                 android:textSize="14sp" />
 
                             <RadioButton
@@ -106,27 +111,31 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="5%"
-                                android:textColor="@color/white"
 
+
+                                android:textColor="@color/white"
+                                app:buttonTint="@color/new_color"
                                 android:textSize="14sp" />
 
                             <RadioButton
                                 android:id="@+id/percent_12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                app:buttonTint="@color/new_color"
                                 android:checked="true"
                                 android:text="12.5%"
-                                android:textColor="@color/white"
 
+
+                                android:textColor="@color/white"
                                 android:textSize="14sp" />
 
                             <RadioButton
                                 android:id="@+id/other"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                app:buttonTint="@color/new_color"
                                 android:text="other"
                                 android:textColor="@color/white"
-
                                 android:textSize="14sp" />
                         </RadioGroup>
 
@@ -138,10 +147,14 @@
                             android:background="@drawable/rounded"
                             android:hint="Custom VAT Rate"
                             android:imeOptions="actionDone"
+
+                            android:textColorHint="@color/white"
+                            android:paddingLeft="@dimen/_10sdp"
                             android:inputType="numberDecimal"
                             android:maxLength="25"
                             android:nextFocusDown="@+id/interest"
                             android:paddingStart="10dp"
+
                             android:tag="binding_5"
                             android:textColor="@color/white"
                             android:visibility="gone" />
@@ -166,10 +179,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/rounded"
+                            android:background="@drawable/bg_app"
                             android:focusable="true"
                             android:focusableInTouchMode="true"
                             android:gravity="center_vertical"
+
+                            android:textColorHint="@color/white"
+                            android:paddingLeft="@dimen/_10sdp"
                             android:nextFocusDown="@+id/principal"
                             android:tag="binding_6" />
                     </LinearLayout>
@@ -187,7 +203,7 @@
                             android:layout_height="@dimen/_35sdp"
                             android:layout_margin="@dimen/_10sdp"
                             android:layout_weight="1"
-                            android:backgroundTint="#4C4141"
+                            android:backgroundTint="#26C4C4C4"
 
                             android:padding="@dimen/_1sdp"
                             android:text="@string/btn_reset"
@@ -200,7 +216,7 @@
                             android:layout_height="@dimen/_35sdp"
                             android:layout_margin="@dimen/_10sdp"
                             android:layout_weight="1"
-                            android:backgroundTint="@color/footer_color"
+                            android:backgroundTint="@color/new_color"
 
                             android:padding="@dimen/_1sdp"
                             android:text="@string/btn_calculate"
@@ -212,118 +228,118 @@
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
+                <LinearLayout
                     android:id="@+id/resultSection"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:visibility="gone"
-                    android:backgroundTint="#1D1D1D"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="@dimen/_10sdp">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_15sdp"
-                        android:background="@drawable/rounded"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/bg_app"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
-                        <LinearLayout
+                        <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Original Cost"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="start"
-                                android:padding="5dp"
-                                android:text="Original Cost"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/originalCost"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="end"
-                                android:padding="5dp"
-                                android:tag="binding_7"
-                                android:text="0"
-                                android:textColor="@color/white"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/originalCost"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="start"
-                                android:padding="5dp"
-                                android:text="VAT Price"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/vatPrice"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="end"
-                                android:padding="5dp"
-                                android:tag="binding_8"
-                                android:text="0"
-                                android:textColor="@color/white"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="start"
-                                android:padding="5dp"
-                                android:text="Net Price"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/netPrice"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="end"
-                                android:padding="5dp"
-                                android:tag="binding_9"
-                                android:text="0"
-                                android:textColor="@color/white"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:tag="binding_7"
+                            android:text=" "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/bg_app"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="VAT Price"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/vatPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:tag="binding_8"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/bg_app"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Net Price"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/netPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:tag="binding_9"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

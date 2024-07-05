@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -42,7 +43,7 @@ public class Vat_calculate extends Fragment {
     private float rate = 12.5f;
     private EditText rate_ET;
     private final int rbset = 0;
-    private CardView resultSection;
+    private LinearLayout resultSection;
     private Spinner vatSpinner;
     private float vatprice;
     private final boolean isCalculated = false;

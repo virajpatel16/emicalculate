@@ -45,7 +45,7 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             if (i % 2 != 1) {
                 linearLayout = detailViewHolder.relativeLayout1;
                 activity2 = activity;
-                i2 = R.color.round;
+                i2 = R.color.data;
             } else {
                 linearLayout = detailViewHolder.relativeLayout1;
                 activity2 = activity;

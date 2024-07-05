@@ -56,11 +56,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/roundad_corner"
+                android:background="@drawable/bg_app"
+                android:paddingLeft="@dimen/_10sdp"
                 android:drawableRight="@drawable/currency_rupee_24dp_fill0_wght400_grad0_opsz24"
                 android:hint="@string/header_principal_amount"
                 android:inputType="numberDecimal"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -75,11 +77,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/roundad_corner"
+                android:background="@drawable/bg_app"
+                android:paddingLeft="@dimen/_10sdp"
                 android:drawableRight="@drawable/percent_24dp_fill0_wght400_grad0_opsz24"
                 android:hint="@string/header_rate_of_interest"
                 android:inputType="numberDecimal"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -90,47 +94,63 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp" />
 
-            <EditText
-                android:id="@+id/edt_tenure"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/roundad_corner"
-                android:hint="@string/header_loan_term_in_year"
-                android:inputType="numberDecimal"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content">
 
+                <EditText
+                    android:id="@+id/edt_tenure"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_app"
+                    android:hint="@string/header_loan_term_in_year"
+                    android:paddingLeft="@dimen/_10sdp"
 
-            <RadioGroup
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_marginVertical="@dimen/_5sdp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/tv_years"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_25sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:text="@string/years"
+                    android:inputType="numberDecimal"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
-                    app:buttonTint="@color/footer_color" />
+                    android:textColorHint="@color/white" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/tv_months"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_25sdp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:text="@string/months"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
-                    app:buttonTint="@color/footer_color" />
+                <RadioGroup
+                    android:id="@+id/date"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle"
+                    android:elevation="@dimen/_10sdp"
+                    android:orientation="horizontal">
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/tv_years"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/togglewidget"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="Year"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/tv_months"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/togglewidget"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="Month"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </RelativeLayout>
 
 
             <LinearLayout
@@ -146,8 +166,7 @@
                     android:layout_height="@dimen/_35sdp"
                     android:layout_margin="@dimen/_10sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="#4C4141"
-
+                    android:backgroundTint="#26C4C4C4"
                     android:padding="@dimen/_1sdp"
                     android:text="@string/btn_reset"
                     android:textColor="@color/white"
@@ -159,8 +178,10 @@
                     android:layout_height="@dimen/_35sdp"
                     android:layout_margin="@dimen/_10sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/footer_color"
-
+                    android:backgroundTint="@color/new_color"
+                    android:elevation="@dimen/_10sdp"
+                    app:elevation="@dimen/_10sdp"
+                    app:cornerRadius="@dimen/_10sdp"
                     android:padding="@dimen/_1sdp"
                     android:text="@string/btn_calculate"
                     android:textColor="@color/white"
@@ -184,6 +205,7 @@
                     android:layout_width="@dimen/_300sdp"
                     android:layout_height="@dimen/_180sdp"
                     android:layout_gravity="center"
+                    android:background="@drawable/bg_app"
                     android:textAlignment="center" />
 
 
@@ -210,7 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -226,7 +248,7 @@
                                 android:layout_marginBottom="@dimen/_10sdp"
 
                                 android:text="@string/header_total_interest"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -256,7 +278,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/_10sdp"
                                 android:text="@string/header_total_payment"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -274,7 +296,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
 
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -289,7 +311,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="@string/header_monthly_emi"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -306,7 +328,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_3sdp"
-                        android:background="@drawable/rounded">
+                        android:background="@drawable/bg_app">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -321,7 +343,7 @@
                                 android:layout_marginEnd="@dimen/_10sdp"
                                 android:layout_marginBottom="@dimen/_10sdp"
                                 android:text="@string/header_total_principal"
-                                android:textColor="#877F7F"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_13sdp" />
 
                             <TextView
@@ -342,8 +364,11 @@
                 android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/_10sdp"
-                android:backgroundTint="@color/footer_color"
                 android:padding="@dimen/_1sdp"
+                android:backgroundTint="@color/new_color"
+                android:elevation="@dimen/_10sdp"
+                app:elevation="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_10sdp"
                 android:text="Show Details"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_18sdp" />

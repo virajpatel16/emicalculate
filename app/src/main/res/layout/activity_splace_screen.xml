@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#1D1D1D"
+    android:background="#1E1E1E"
     tools:context=".Splace_screen">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_gravity="center|bottom"
-        android:gravity="center|bottom"
+        android:gravity="center"
         android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/_500sdp">
     <ImageView
-        android:layout_width="@dimen/_50sdp"
+        android:layout_width="@dimen/_150sdp"
         android:scaleType="centerCrop"
         android:layout_gravity="bottom|center"
-        android:layout_height="@dimen/_50sdp"
-        android:src="@drawable/logo"/>
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/emi_logo"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -28,25 +28,25 @@
             android:gravity="center|bottom"
             android:textSize="@dimen/_17sdp"
             android:layout_gravity="center|bottom"
-            android:text="Emi Calculator"
+            android:text="EMI LOAN CALCULATOR"
             android:textStyle="bold"
             android:textColor="@color/white"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:gravity="center"
-            android:textSize="@dimen/_11sdp"
-            android:layout_gravity="center"
-            android:text="Calculate loan Emis,interest rates."
-            android:textColor="@color/white"
-            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_height="@dimen/_100sdp">
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
             app:lottie_rawRes="@raw/loading"
+
             app:lottie_autoPlay="true"
+            android:layout_gravity="center"
             app:lottie_loop="true"/>
     </LinearLayout>
-
 </LinearLayout>

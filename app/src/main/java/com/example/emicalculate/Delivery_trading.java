@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -37,7 +38,7 @@ public class Delivery_trading extends Fragment {
     public int mStatePosition;
     Button Calculate;
     ImageView delivery_back;
-    CardView fullinfo;
+    LinearLayout fullinfo;
     boolean isCalculated = false;
     Button reset;
     private TextView InvestAmount;
